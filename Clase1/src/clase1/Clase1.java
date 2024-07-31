@@ -1,6 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Repositorio: https://github.com/DAlexSC/LAB_IPC1_2S2024.git
  */
 package clase1;
 
@@ -27,10 +26,10 @@ public class Clase1 {
          * 
          * La diferencia entre una variable inicializada y una que no lo está, es que la variable inicializada tiene un valor predeterminado cuando se ejecuta el proyecto.
          * 
+         * MAS INFORMACION: https://www.manualweb.net/java/tipos-datos-primitivos-java/
+         * 
          * PREGUNTA: ¿Que sucede sino inicializo las variables que declaro?
          * RESPUESTA: Estas variables tendra valores por defecto. Es por esto que, se recomienda siempre inicializar las variables que declaramos para un mejor manejo de las variables.
-         * 
-         * MAS INFORMACION: https://www.manualweb.net/java/tipos-datos-primitivos-java/
          */
         
         // EJEMPLO
@@ -68,27 +67,43 @@ public class Clase1 {
         
         /**
          * Un tema fundamental al programar es el casteo de variables. El casting es un procedimiento para tansformar una variable primitiva de un tipo a otro.
+         * 
          * Existen 2 tipos de casteos los cuales son los siguientes:
+         * Implicito: Ocurre cuando se asigna un valor de un tipo de dato mas pequeño a un tipo de dato mas grande. Este tipo de casting se realiza AUTOMATICAMENTE.
+         * Explicito: Ocurre cuando se asigna un valor de un tipo de dato mas grande a un tipo de dato mas pequeño. Este tipo de casting debe ser especificado EXPLICITAMENTE.
          * 
-         * Implicito: Ocurre cuando se asina un valor de un tipo de dato mas pequenio a un tipo de damos mas grande. Este tipo de casting se realiza AUTOMATICAMENTE.
-         * Explicito: Ocurre cuando se asigna un valor de un tipo de dato mas grande a uno mas pequenio. Este tipo de casting debe ser especificado EXPLICITAMENTE.
+         * IMPORTANTE LEER: https://techkrowd.com/programacion/java/java-conversion-de-tipos-casting/
          * 
-         * PREGUNTA: ¿A que se refiere cuando se dice "tipo de dato mas pequenio" o "tipo de dato mas grande"?
-         * RESPUESTA: Se refiere al tamanio que ocupa la variable en memoria. 
-         * Esto puede verse en la tabla que se encuentra en el siguiente link: https://www.abrirllave.com/java/tipos-de-datos-primitivos.php         * 
+         * PREGUNTA: ¿A que se refiere cuando se dice "tipo de dato mas pequeño" o "tipo de dato mas grande"?
+         * RESPUESTA: Se refiere al tamanio que ocupa la variable en memoria. Esto puede verse en la tabla que se encuentra en el link: https://www.abrirllave.com/java/tipos-de-datos-primitivos.php
          */
         
-        // EJEMPLO 1 CASO IMPLICITO
+        // EJEMPLO 1 CASTEO IMPLICITO - De byte a short
+        byte x = 1; // Este tipo de dato es de 8 bits de memoria
+        short y; // Este tipo de dato es de 16 bits de memoria
+        // Como el tamaño de memoria de 'x' es menor o igual al tamaño de memoria de 'y' entonces se puede realizar el casteo implicito.
+        y = x;
+        // Pregunta: ¿Que ocurre si a 'x' le asigno el valor de 'y'? | Respuesta: Ocurrira un error debido a que no se puede realizar el casteo implicito.
+        // x = y; // Error (Si descomentas esta linea verás que ocurre un error)
         
-        // EJEMPLO 2 CASO IMPLICITO
+        // EJEMPLO 2 CASTEO IMPLICITO - De int a float
+        int a = 1; // Este tipo de dato es de 32 bits de memoria
+        double b; // Este tipo de dato es de 32 bits de memoria
+        // Como el tamaño de memoria de 'a' es menor o igual al tamaño de memoria de 'b' entonces se puede realizar el casteo implicito.
+        b = a;
+        // Pregunta: ¿Que ocurre si a 'a' le asigno el valor de 'b'? | Respuesta: Ocurrira un error debido a que no se puede realizar el casteo implicito.
+        // a = b; // Error (Si descomentas esta linea verás que ocurre un error)
         
-        // EJEMPLO 3 CASO EXPLICITO
-        
-        // EJEMPLO 4 CASO EXPLICITO
+        // EJEMPLO 3 CASTEO EXPLICITO
+        short grande = 10; // Este tipo de dato es de 16 bits de memoria
+        byte pequenio = 5; // Este tipo de dato es de 8 bits de memoria
+        pequenio = (byte) grande; // Se le esta asignando el valor que tiene la variable 'grande' a la variable 'pequenio', por medio, del casteo implicito.
         
         /**
-         * Un tipo de dato que NO es primitivo pero que se utiliza comunmente al programar es el String.
+         * Un tipo de dato que NO es primitivo. pero que se utiliza comunmente al programar, es el String. Este tipo de dato permite el manejo de cadenas de caracteres (texto).
          */
+        String mensaje = "Hola mundo!";
+        mensaje = "Hola :D";
     }
     
 }
