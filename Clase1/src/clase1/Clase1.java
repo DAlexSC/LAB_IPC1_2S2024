@@ -101,6 +101,8 @@ public class Clase1 {
         
         /**
          * Un tipo de dato que NO es primitivo. pero que se utiliza comunmente al programar, es el String. Este tipo de dato permite el manejo de cadenas de caracteres (texto).
+         * 
+         * MAS INFORMACION: https://dit.upm.es/~pepe/libros/vademecum/index.html?n=373.html
          */
         String mensaje = "Hola mundo!";
         mensaje = "Hola :D";
