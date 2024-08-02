@@ -4,7 +4,6 @@
 package clase1;
 
 /**
- *
  * @author Douglas Soch
  */
 public class Clase1 {
