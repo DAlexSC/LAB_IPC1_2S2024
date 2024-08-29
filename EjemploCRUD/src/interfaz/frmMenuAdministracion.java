@@ -6,7 +6,9 @@ package interfaz;
 
 import archivo.ManejadorArchivoBinarioInvestigador;
 import java.util.ArrayList;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import modelo.Investigador;
 
@@ -191,8 +193,14 @@ public class frmMenuAdministracion extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        String ruta = JOptionPane.showInputDialog(null, "Ingrese la ruta del .CSV", "Carga CSV", JOptionPane.QUESTION_MESSAGE);
-        System.out.println(ruta);
+        JFileChooser chooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("CSV", "csv");
+        chooser.setFileFilter(filter);
+        int returnVal = chooser.showOpenDialog(null);
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
+            String ruta_archivo = chooser.getSelectedFile().getPath();
+            System.out.println("Ruta del archivo: " + ruta_archivo);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
