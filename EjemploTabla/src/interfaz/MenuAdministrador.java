@@ -26,11 +26,15 @@ public class MenuAdministrador extends javax.swing.JFrame {
         columnaAcciones.setCellRenderer(new RenderBotonTabla());
         columnaAcciones.setCellEditor(new RenderBotonTabla());
         
-        Object data[] = {"1","Muestra 1","Ingreso"};
+        Object data[][] = {
+            {"1","Muestra 1","Ingreso"},
+            {"2", "Muestra 2", "En Proceso"},
+            {"3", "Muestra 3", "Procesado"}
+        };
         DefaultTableModel tablaModelo = (DefaultTableModel)jTable1.getModel();
-        tablaModelo.addRow(new Object[]{"1", "Muestra 1", "Ingreso"});
-        tablaModelo.addRow(new Object[]{"2", "Muestra 2", "En Proceso"});
-        tablaModelo.addRow(new Object[]{"3", "Muestra 3", "Procesado"});
+        for (Object[] objects : data) {
+            tablaModelo.addRow(objects);
+        }
     }
 
     /**
@@ -80,7 +84,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,16 +101,16 @@ public class MenuAdministrador extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(81, 81, 81)
+                .addGap(147, 147, 147)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 581, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(130, 130, 130)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(102, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addGap(93, 93, 93))
         );
 
         pack();
