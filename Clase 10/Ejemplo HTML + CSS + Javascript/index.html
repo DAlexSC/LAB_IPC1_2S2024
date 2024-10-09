@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p id="counter">0</p>
+    <button id="incrementBtn">Incrementar</button>
+
+    <script>
+        let count = 0;
+        const counterDisplay = document.getElementById('counter');
+        const incrementBtn = document.getElementById('incrementBtn');
+
+        incrementBtn.addEventListener('click', () => {
+            count++;
+            counterDisplay.textContent = count;
+        });
+    </script>
+</body>
+</html>
